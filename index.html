@@ -63,7 +63,8 @@
 
         /* Hero Section */
         .hero {
-            background: linear-gradient(rgba(40, 42, 54, 0.8), rgba(40, 42, 54, 0.8)), url('botox2.jpg'); 
+            /* Usando uma foto "1" (Resultado) para o fundo ficar bonito */
+            background: linear-gradient(rgba(40, 42, 54, 0.8), rgba(40, 42, 54, 0.8)), url('botox1.jpg'); 
             background-size: cover;
             background-position: center;
             height: 80vh; 
@@ -144,39 +145,50 @@
             border-color: var(--accent-color);
         }
 
-        /* --- CONFIGURAÇÃO DAS IMAGENS (Baseada no seu código) --- */
+        /* --- CONFIGURAÇÃO DAS FOTOS LADO A LADO --- */
         .servico-media {
             display: grid;
-            grid-template-columns: 1fr 1fr; /* Divide em 2 colunas iguais */
-            gap: 2px; /* Pequeno espaço entre as fotos */
+            grid-template-columns: 1fr 1fr; /* Duas colunas */
+            gap: 2px;
             border-bottom: 1px solid var(--border-color);
         }
         
-        .servico-media img {
-            width: 100%;
-            height: 220px; /* Altura padrão */
-            object-fit: cover;
-            /* Efeito suave ao passar o mouse */
-            transition: opacity 0.3s;
-        }
-        
-        /* Etiquetas Antes/Depois (Opcional, mas ajuda muito) */
         .img-wrapper {
             position: relative;
+            width: 100%;
+            height: 220px; /* Altura fixa */
         }
+
+        .img-wrapper img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        
+        /* Etiquetas Antes/Depois */
         .img-label {
             position: absolute;
             bottom: 0;
             left: 0;
             width: 100%;
-            background-color: rgba(0,0,0,0.6);
-            color: white;
-            font-size: 0.75rem;
             text-align: center;
+            font-size: 0.75rem;
+            font-weight: 700;
             text-transform: uppercase;
-            padding: 2px 0;
+            padding: 4px 0;
+            letter-spacing: 1px;
         }
-        /* ----------------------------------------------------- */
+        /* Cor da etiqueta Antes */
+        .img-wrapper:first-child .img-label {
+            background-color: rgba(0,0,0,0.7);
+            color: #ccc;
+        }
+        /* Cor da etiqueta Depois */
+        .img-wrapper:last-child .img-label {
+            background-color: var(--accent-color);
+            color: #282a36;
+        }
+        /* ------------------------------------- */
 
         .service-body {
             padding: 25px;
@@ -248,7 +260,7 @@
 
         @media (max-width: 768px) {
             .hero h1 { font-size: 2.2rem; }
-            .servico-media img { height: 160px; } /* Ajuste altura mobile */
+            .img-wrapper { height: 160px; } /* Altura menor no celular */
         }
     </style>
 </head>
@@ -292,11 +304,11 @@
                     <div class="service-card">
                         <div class="servico-media">
                             <div class="img-wrapper">
-                                <img src="prog1.jpg" alt="Antes">
+                                <img src="prog2.jpg" alt="Antes">
                                 <span class="img-label">Antes</span>
                             </div>
                             <div class="img-wrapper">
-                                <img src="prog2.jpg" alt="Depois">
+                                <img src="prog1.jpg" alt="Depois">
                                 <span class="img-label">Depois</span>
                             </div>
                         </div>
@@ -313,11 +325,11 @@
                     <div class="service-card">
                         <div class="servico-media">
                             <div class="img-wrapper">
-                                <img src="afro1.jpg" alt="Antes">
+                                <img src="afro2.jpg" alt="Antes">
                                 <span class="img-label">Antes</span>
                             </div>
                             <div class="img-wrapper">
-                                <img src="afro2.jpg" alt="Depois">
+                                <img src="afro1.jpg" alt="Depois">
                                 <span class="img-label">Depois</span>
                             </div>
                         </div>
@@ -334,11 +346,11 @@
                     <div class="service-card">
                         <div class="servico-media">
                             <div class="img-wrapper">
-                                <img src="botox1.jpg" alt="Antes">
+                                <img src="botox2.jpg" alt="Antes">
                                 <span class="img-label">Antes</span>
                             </div>
                             <div class="img-wrapper">
-                                <img src="botox2.jpg" alt="Depois">
+                                <img src="botox1.jpg" alt="Depois">
                                 <span class="img-label">Depois</span>
                             </div>
                         </div>
@@ -355,11 +367,11 @@
                     <div class="service-card">
                         <div class="servico-media">
                             <div class="img-wrapper">
-                                <img src="relax1.jpg" alt="Antes">
+                                <img src="relax2.jpg" alt="Antes">
                                 <span class="img-label">Antes</span>
                             </div>
                             <div class="img-wrapper">
-                                <img src="relax2.jpg" alt="Depois">
+                                <img src="relax1.jpg" alt="Depois">
                                 <span class="img-label">Depois</span>
                             </div>
                         </div>
@@ -376,11 +388,11 @@
                     <div class="service-card">
                         <div class="servico-media">
                             <div class="img-wrapper">
-                                <img src="escova1.jpg" alt="Antes">
+                                <img src="escova2.jpg" alt="Antes">
                                 <span class="img-label">Antes</span>
                             </div>
                             <div class="img-wrapper">
-                                <img src="escova2.jpg" alt="Depois">
+                                <img src="escova1.jpg" alt="Depois">
                                 <span class="img-label">Depois</span>
                             </div>
                         </div>
@@ -397,11 +409,11 @@
                     <div class="service-card">
                         <div class="servico-media">
                             <div class="img-wrapper">
-                                <img src="hidra1.jpg" alt="Antes">
+                                <img src="hidra2.jpg" alt="Antes">
                                 <span class="img-label">Antes</span>
                             </div>
                             <div class="img-wrapper">
-                                <img src="hidra2.jpg" alt="Depois">
+                                <img src="hidra1.jpg" alt="Depois">
                                 <span class="img-label">Depois</span>
                             </div>
                         </div>
@@ -418,11 +430,11 @@
                     <div class="service-card">
                         <div class="servico-media">
                             <div class="img-wrapper">
-                                <img src="corte1.png" alt="Antes">
+                                <img src="corte2.png" alt="Antes">
                                 <span class="img-label">Antes</span>
                             </div>
                             <div class="img-wrapper">
-                                <img src="corte2.png" alt="Depois">
+                                <img src="corte1.png" alt="Depois">
                                 <span class="img-label">Depois</span>
                             </div>
                         </div>
