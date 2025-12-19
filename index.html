@@ -12,12 +12,12 @@
     <style>
         /* --- Variáveis do Tema Dark --- */
         :root {
-            --bg-dark: #282a36;       /* Fundo Principal */
-            --bg-card: #2f313a;       /* Fundo dos Cards */
-            --bg-header: #1a1c22;     /* Fundo Menu/Footer */
-            --accent-color: #8FB9A8;  /* Verde Sálvia (Destaque) */
-            --text-main: #f8f8f2;     /* Texto Claro */
-            --text-muted: #d0d0d0;    /* Texto Secundário */
+            --bg-dark: #282a36;
+            --bg-card: #2f313a;
+            --bg-header: #1a1c22;
+            --accent-color: #8FB9A8;
+            --text-main: #f8f8f2;
+            --text-muted: #d0d0d0;
             --border-color: #3a3c4a;
         }
 
@@ -34,7 +34,7 @@
             font-weight: 600;
         }
 
-        /* --- Navbar Personalizada --- */
+        /* Navbar */
         .navbar {
             background-color: var(--bg-header) !important;
             box-shadow: 0 3px 10px rgba(0,0,0,0.2);
@@ -59,13 +59,10 @@
             border-color: var(--accent-color);
             background-color: rgba(143, 185, 168, 0.2);
         }
-        .navbar-toggler-icon {
-            filter: invert(1);
-        }
+        .navbar-toggler-icon { filter: invert(1); }
 
-        /* --- Hero Section (Banner) --- */
+        /* Hero Section */
         .hero {
-            /* Fundo escuro com imagem */
             background: linear-gradient(rgba(40, 42, 54, 0.8), rgba(40, 42, 54, 0.8)), url('botox2.jpg'); 
             background-size: cover;
             background-position: center;
@@ -77,10 +74,7 @@
             margin-bottom: 40px;
             border-bottom: 1px solid var(--border-color);
         }
-        .hero h1 {
-            font-size: 3.5rem;
-            margin-bottom: 20px;
-        }
+        .hero h1 { font-size: 3.5rem; margin-bottom: 20px; }
         .hero p {
             font-size: 1.2rem;
             color: var(--text-muted);
@@ -90,7 +84,7 @@
             margin-right: auto;
         }
 
-        /* --- Botões --- */
+        /* Botões */
         .btn-custom {
             background-color: var(--accent-color);
             color: white;
@@ -105,8 +99,8 @@
         }
         .btn-custom:hover {
             background-color: #7DA89B;
-            color: white;
             transform: translateY(-2px);
+            color: white;
         }
         .btn-outline-custom {
             border: 2px solid var(--accent-color);
@@ -120,10 +114,8 @@
             color: white;
         }
 
-        /* --- Serviços (Cards) --- */
-        .section-padding {
-            padding: 60px 0;
-        }
+        /* Serviços */
+        .section-padding { padding: 60px 0; }
         .section-title {
             text-align: center;
             margin-bottom: 50px;
@@ -152,7 +144,7 @@
             border-color: var(--accent-color);
         }
         .service-img {
-            height: 300px; /* Altura generosa para ver o resultado */
+            height: 300px;
             object-fit: cover;
             width: 100%;
             border-bottom: 1px solid var(--border-color);
@@ -171,45 +163,38 @@
             margin: 10px 0;
             font-family: 'Raleway', sans-serif;
         }
-        .service-body h3 {
-            font-size: 1.5rem;
-        }
-        .service-body p {
-            font-size: 0.95rem;
-            color: var(--text-muted);
-        }
 
-        /* --- Contato & Tabela --- */
+        /* Contato */
         .contact-section {
             background-color: var(--bg-header);
             border-top: 1px solid var(--border-color);
             color: white;
-        }
-        .tabela-container {
-            background-color: white; /* Fundo branco para a tabela aparecer bem */
-            padding: 10px;
-            border-radius: 12px;
-            box-shadow: 0 4px 20px rgba(0,0,0,0.4);
-        }
-        .tabela-img {
-            width: 100%;
-            border-radius: 5px;
-            display: block;
+            text-align: center;
         }
 
-        /* --- Footer --- */
+        /* Nova Seção da Tabela */
+        .tabela-section {
+            background-color: #fff; /* Fundo branco para destacar a tabela */
+            padding: 60px 0;
+            color: #333; /* Texto escuro nesta seção */
+        }
+        .tabela-container img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 10px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.2);
+            border: 1px solid #ddd;
+        }
+
+        /* Footer */
         footer {
             background-color: #111;
             color: #888;
             padding: 40px 0;
             border-top: 1px solid #222;
         }
-        footer h4 {
-            color: var(--accent-color);
-            margin-bottom: 20px;
-        }
 
-        /* --- WhatsApp Flutuante --- */
+        /* WhatsApp Flutuante */
         .whatsapp-float {
             position: fixed;
             width: 60px;
@@ -252,6 +237,7 @@
                 <ul class="navbar-nav">
                     <li class="nav-item"><a class="nav-link" href="#home">Início</a></li>
                     <li class="nav-item"><a class="nav-link" href="#servicos">Serviços</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#tabela">Tabela</a></li>
                     <li class="nav-item"><a class="nav-link" href="#contato">Contato</a></li>
                 </ul>
             </div>
@@ -357,33 +343,33 @@
                         </div>
                     </div>
                 </div>
+            </div>
+        </div>
+    </section>
 
+    <section id="tabela" class="tabela-section">
+        <div class="container text-center">
+            <h2 style="font-family: 'Playfair Display', serif; font-weight: 600; margin-bottom: 30px;">Tabela de Valores Completa</h2>
+            <div class="tabela-container">
+                <img src="tabela.jpg" alt="Tabela de Preços Completa">
             </div>
         </div>
     </section>
 
     <section id="contato" class="section-padding contact-section">
         <div class="container">
-            <div class="row align-items-center">
-                
-                <div class="col-md-6 mb-4">
+            <div class="row justify-content-center">
+                <div class="col-md-8">
                     <h2>Entre em Contato</h2>
-                    <p style="color: var(--text-muted);">Tire suas dúvidas ou agende seu horário agora mesmo.</p>
-                    <br>
-                    <div style="font-size: 1.1em;">
-                        <p><i class="fab fa-whatsapp me-2" style="color: var(--accent-color);"></i> <strong>WhatsApp:</strong> (21) 99835-6217</p>
-                        <p><i class="fas fa-map-marker-alt me-2" style="color: var(--accent-color);"></i> <strong>Local:</strong> Rio de Janeiro - RJ</p>
+                    <p style="color: var(--text-muted); margin-bottom: 30px;">Tire suas dúvidas ou agende seu horário agora mesmo.</p>
+                    
+                    <div style="font-size: 1.2em; margin-bottom: 30px;">
+                        <p><i class="fab fa-whatsapp me-2" style="color: var(--accent-color);"></i> (21) 99835-6217</p>
+                        <p><i class="fas fa-map-marker-alt me-2" style="color: var(--accent-color);"></i> Rio de Janeiro - RJ</p>
                     </div>
-                    <a href="https://wa.me/5521998356217" class="btn btn-custom mt-4">Chamar no WhatsApp</a>
+                    
+                    <a href="https://wa.me/5521998356217" class="btn btn-custom btn-lg">Agendar pelo WhatsApp</a>
                 </div>
-
-                <div class="col-md-6">
-                    <div class="tabela-container">
-                        <h5 style="color:#333; text-align:center; margin-bottom:15px; font-weight:700;">Tabela de Valores Completa</h5>
-                        <img src="tabela.jpg" class="tabela-img" alt="Tabela de Preços">
-                    </div>
-                </div>
-
             </div>
         </div>
     </section>
